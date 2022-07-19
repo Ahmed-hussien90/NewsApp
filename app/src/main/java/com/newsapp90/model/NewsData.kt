@@ -1,12 +1,13 @@
 package com.newsapp90.model
 
+import com.google.gson.annotations.SerializedName
+
 data class NewsData(
-    val source: Source,
-    val author: String,
-    val content: String,
-    val description: String,
-    val publishedAt: String,
-    val title: String,
-    val url: String,
-    val urlToImage: String
+    @SerializedName("articles")
+    var articles: MutableList<Article>,
+    @SerializedName("status")
+    var status: String?,
+    @SerializedName("totalResults")
+    var totalResults: Int?
 )
+
