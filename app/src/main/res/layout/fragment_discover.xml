@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.DiscoverFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/topnewstext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/TopNews"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/topnews_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topnewstext"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="5dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topnews_recycler"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/RecentNews"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/seeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topnews_recycler"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/SeeAll"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/seeAll"
+                android:layout_marginTop="5dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

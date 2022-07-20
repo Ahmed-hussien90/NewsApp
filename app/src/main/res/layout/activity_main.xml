@@ -7,10 +7,10 @@
     tools:context=".ui.MainActivity">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/news_recycler"
-        android:layout_width="407dp"
-        android:layout_height="726dp"
+    <FrameLayout
+        android:id="@+id/main_FrameL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="labeled" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

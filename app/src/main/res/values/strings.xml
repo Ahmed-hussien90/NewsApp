@@ -3,4 +3,12 @@
     <string name="top_headlines">Top HeadLines</string>
     <string name="Favorites">Favorites</string>
     <string name="SearchNews">Search News</string>
+    <string name="category">Categories</string>
+    <string name="discover">Discover</string>
+    <string name="TopNews">Top News</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="RecentNews">Recent News</string>
+    <string name="SeeAll">See All</string>
 </resources>

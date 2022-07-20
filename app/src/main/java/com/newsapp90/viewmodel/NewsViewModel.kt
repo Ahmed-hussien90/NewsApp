@@ -19,7 +19,6 @@ class NewsViewModel : ViewModel() {
             var response = RetrofitInstance.api.getTopNews("us", 1, API_KEY)
             if (response.isSuccessful) {
                 mutableLiveData.postValue(response.body())
-
             }
         }
 
