@@ -3,11 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.17617753623188406" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/categ_background.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/custom_background.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_border_all_24.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_business_24.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_healing_24.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1275" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_science_24.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.122" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_sports_soccer_24.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_baseline_technology_24.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_search_black.xml" value="0.1065" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/mainbackground.xml" value="0.1" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/nav_icon_background.xml" value="0.122" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_categories.xml" value="0.22" />
         <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_discover.xml" value="0.25" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_display_news.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_favourite.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_news.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_search.xml" value="0.22" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/list_item.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/news_list_item.xml" value="0.25" />
-        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/news_list_item2.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/news_list_item2.xml" value="0.25" />
         <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/news_list_item_horizental.xml" value="0.67" />
+        <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/layout/shimmer_layout.xml" value="0.24791666666666667" />
         <entry key="..\:/Users/20114/AndroidStudioProjects/NewsApp/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.24791666666666667" />
       </map>
     </option>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.DisplayNewsFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/imagecard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="1dp"
+                app:cardPreventCornerOverlap="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/displayed_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="fitXY"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/displayed_image"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/displayed_title"
+                            style="@style/TextAppearance.MaterialComponents.Headline5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/displayed_image"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="9"
+                            android:paddingStart="2dp"
+                            android:text="title"
+                            android:textStyle="bold" />
+
+                        <com.varunest.sparkbutton.SparkButton
+                            android:id="@+id/spark_button"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_below="@id/displayed_image"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_toEndOf="@+id/displayed_title"
+                            android:layout_weight="2"
+                            app:sparkbutton_activeImage="@drawable/heart_on"
+                            app:sparkbutton_iconSize="35dp"
+                            app:sparkbutton_inActiveImage="@drawable/heart_off"
+                            app:sparkbutton_primaryColor="@color/heart_primary_color"
+                            app:sparkbutton_secondaryColor="@color/heart_secondary_color" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/displayed_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imagecard"
+                android:layout_margin="10dp"
+                android:text="date" />
+
+            <TextView
+                android:id="@+id/displayed_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/displayed_date"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:text="description"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/displayed_description"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="More Details : "
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/displayed_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/displayed_description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/more"
+                android:autoLink="web"
+                android:text=" url "
+                android:textAlignment="textStart"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

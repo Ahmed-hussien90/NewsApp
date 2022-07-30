@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.fragments.NewsFragment">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/shimmerLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_layout" />
+
+                <include layout="@layout/shimmer_layout" />
+
+                <include layout="@layout/shimmer_layout" />
+
+                <include layout="@layout/shimmer_layout" />
+
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/category_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/category"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/news_fragment_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

@@ -1,28 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <FrameLayout
-        android:id="@+id/main_FrameL"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </data>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        app:labelVisibilityMode="labeled" />
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainbackground"
+                app:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="5dp"
+                    android:paddingTop="30dp"
+                    android:paddingEnd="5dp">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/myToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="?attr/actionBarSize"
+                        android:theme="?attr/actionBarTheme" />
+
+                    <TextView
+                        android:id="@+id/page_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:letterSpacing="0.1"
+                        android:text="@string/home"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/menuButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="menu"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_menu_24" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_alarm_24"
+
+                        />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/taplayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/page_name"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="10dp"
+                        app:tabIndicatorColor="@color/white"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabIndicatorHeight="5dp"
+                        app:tabTextColor="@color/white">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/topnewstap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/TopNews"
+
+                            />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/latesttap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/latest" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/trendingtap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/trending" />
+
+                    </com.google.android.material.tabs.TabLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+                <FrameLayout
+                    android:id="@+id/main_FrameL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark"
+                app:itemIconTint="@drawable/nav_icon_background"
+                app:itemTextColor="@drawable/nav_icon_background"
+                app:labelVisibilityMode="labeled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/bottom_navigation_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:itemIconTint="@color/purple_700"
+            app:itemTextColor="@color/purple_700"
+            app:menu="@menu/bottom_navigation_menu"
+            app:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

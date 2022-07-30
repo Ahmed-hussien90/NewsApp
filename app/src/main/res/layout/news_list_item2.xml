@@ -1,51 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="8dp">
 
-    <LinearLayout
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="article"
+            type="com.newsapp90.model.Article" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list_item_card2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="3dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="8dp">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/news_Image2"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="3dp"
-            app:shapeAppearanceOverlay="@style/roundedCorners"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/news_title2"
-                android:layout_width="wrap_content"
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/news_Image2"
+                android:layout_width="125dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="5dp"
+                loadImage="@{article.urlToImage}"
+                android:layout_marginBottom="10dp"
+                app:shapeAppearanceOverlay="@style/roundedCorners"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="6dp"
-                android:text="TextView"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/news_Image2"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/news_date2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="TextView"
-                android:textColor="@color/purple_500" />
-        </LinearLayout>
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/news_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="@{article.title}"
+                    android:textColor="@color/shuttleGrey"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/news_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@{article.publishedAt}"
+                    android:textColor="@color/shuttleGrey" />
 
-</com.google.android.material.card.MaterialCardView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/ReadMoreButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="READ MORE"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:background="@color/shuttleGrey"
+                        app:backgroundTint="@color/shuttleGrey"
+                        app:cornerRadius="20dp" />
+
+                    <com.varunest.sparkbutton.SparkButton
+                        android:id="@+id/spark_button1"
+                        android:layout_width="45dp"
+                        android:layout_height="60dp"
+                        app:sparkbutton_activeImage="@drawable/heart_on"
+                        app:sparkbutton_iconSize="30dp"
+                        app:sparkbutton_inActiveImage="@drawable/heart_off"
+                        app:sparkbutton_primaryColor="@color/heart_primary_color"
+                        app:sparkbutton_secondaryColor="@color/heart_secondary_color" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_share_24" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

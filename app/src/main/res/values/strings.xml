@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">NewsApp</string>
-    <string name="top_headlines">Top HeadLines</string>
     <string name="Favorites">Favorites</string>
     <string name="SearchNews">Search News</string>
     <string name="category">Categories</string>
@@ -8,7 +7,12 @@
     <string name="TopNews">Top News</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="RecentNews">Recent News</string>
-    <string name="SeeAll">See All</string>
+    <string name="language">language</string>
+    <string name="sortBy">Sorted By</string>
+    <string name="maxResult">"Results"</string>
+    <string name="latest">Latest</string>
+    <string name="trending">trending</string>
+    <string name="home">home</string>
+    <string name="fav">favourite</string>
+    <string name="no_internet_connection">No Internet Connection</string>
 </resources>
