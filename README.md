@@ -16,7 +16,7 @@ the Application use [News API](https://newsapi.org/) to get news
 ## features
 - get top , latest and trending News
 - search about news and filterby (language,sortedby,maxresults)
-- save news to local storage using room database
+- save news with local DB using room database
 
 
 ### libraries used :
