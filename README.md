@@ -30,6 +30,8 @@ the Application use [News API](https://newsapi.org/) to get news
 - Swipe Refresh Layout
 - facebook shimmer
 - DiffUtil
+- room
+- OKHttp
 - Material Design
 
 
